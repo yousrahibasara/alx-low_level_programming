@@ -1,1 +1,1 @@
-int 0-putchar.(c)
+int -putchar(char c);
