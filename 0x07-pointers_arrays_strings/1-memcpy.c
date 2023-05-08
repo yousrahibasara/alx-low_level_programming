@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - entrty point
+ * _memcpy - entrty point
  * @dest: input
  * @src: input
  * @n: input
