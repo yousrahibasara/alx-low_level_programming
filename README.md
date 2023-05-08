@@ -1,1 +1,1 @@
-0x01. C - Variables, if, else, while
+0x07. C - Even more pointers, arrays and strings
