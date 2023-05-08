@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -22,6 +23,3 @@ return (s + i);
 
 return (NULL);
 }
-}
-}
-
