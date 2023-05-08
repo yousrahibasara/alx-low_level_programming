@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -25,5 +26,6 @@ value++;
 check = 1;
 }
 }
-}
+
+if (check == 0)
 }
