@@ -2,7 +2,8 @@
 
 /**
  * print_diagonal - Write a function that draws a diagonal line
- * Return: the numbers of times to print diagonal lines
+ * @n: the numbers of times to print diagonal lines
+ * Return: empty
  */
 
 void print_diagonal(int n)
