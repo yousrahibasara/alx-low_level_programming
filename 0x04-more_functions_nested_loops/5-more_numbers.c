@@ -16,7 +16,7 @@ for (b = 0; b <= 14; b++)
 {
 if (b > 9)
 {
-putchar((a / 10) + '0');
+putchar((b / 10) + '0');
 }
 putchar((b % 10) + '0');
 }
