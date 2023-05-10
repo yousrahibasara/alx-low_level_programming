@@ -24,7 +24,7 @@ for (b = size - a; b > 1; b--)
 {
 putchar(32);
 }
-for (c = 0; c <= a; z++)
+for (c = 0; c <= a; c++)
 {
 putchar(35);
 }
