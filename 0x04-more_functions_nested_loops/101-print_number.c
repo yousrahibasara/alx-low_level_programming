@@ -11,16 +11,15 @@ void print_number(int n)
 
 {
 
-unsigned int k = n;
+unsigned int a;
 
+a = n;
 if (n < 0)
 {
-n *= -1;
-k = n;
-putchar('_');
+putchar(45);
+a = -n;
 }
-k /= 10;
-if (k != 0)
-print_number(k);
-putchar((unsigned int) n % 10 + '0');
+if (a / 10)
+print_number(a / 10);
+putchar((a % 10) + '0');
 }
