@@ -21,6 +21,6 @@ putchar('_');
 }
 d /= 10;
 if (d != 0)
-printf_number(d);
+print_number(d);
 putchar((unsigned int) n % 10 + '0');
 }
