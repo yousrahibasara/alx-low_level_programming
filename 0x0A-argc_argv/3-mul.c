@@ -3,13 +3,13 @@
 #include <stdlib.h>
 
 /**
- * main - print all the args content
+ * _atoi - print all the args content
  * @argc: argument count
  * @argv: argument vector
  * return: always 0
  */
 
-int main(int argc, char *argv[])
+int _atoi(int argc, char *argv[])
 {
 int n1 = 0, n2 = 0;
 
