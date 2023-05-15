@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - print all the args content
+ * @argc: argument count
+ * @argv: argument vector
+ * return: always 0
+ */
+
+int main(int argc, char *argv[1])
+{
+int n1 = 0, n2 = 0;
+
+if (argc == 3)
+{
+n1 = atoi(argv[1]);
+n2 = atoi(argv[2]);
+printf("%d\n", n1 * n2);
+}
+else
+{
+printf("ERROR\n");
+return (1);
+}
+return (0);
+}
