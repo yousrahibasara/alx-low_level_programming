@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 /**
- * whatsmyname - print its name
+ * main - print the number of args
  * @argc: argument count
  * @argv: argument vector
  * return: always 0
  */
 
-int whatsmyname(int argc, char *argv[1])
+int main(int argc, char *argv[1])
 {
-(void) argc;
-printf("%s\n", argv[0]);
-
+(void) argv;
+printf("%d\n", argc - 1);
 return (0);
 }
