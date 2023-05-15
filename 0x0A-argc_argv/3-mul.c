@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - print all the args content
@@ -8,7 +9,7 @@
  * return: always 0
  */
 
-int main(int argc, char *argv[1])
+int main(int argc, char *argv[])
 {
 int n1 = 0, n2 = 0;
 
