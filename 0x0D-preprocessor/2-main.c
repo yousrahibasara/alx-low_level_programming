@@ -8,5 +8,5 @@
 int main(void)
 {
 printf("%s\n", "FILE");
-return(0);
+return (0);
 }
