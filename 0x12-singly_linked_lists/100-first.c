@@ -1,16 +1,33 @@
-#include <stdio.h>
-
-voi first(void)__attribute__((constructor));
-
+#include <stdlib.h>
+#include <string.h>
+#include "lists.h"
 
 /**
- * first - print a sentence
- * function is executed
+ * add_node - ....
+ * @head: ....
+ * @str: .....
+ * Return: ....
  */
 
-void first(void)
+list_t *add_node(list_t **head, const char *str)
 {
-printf("You're beat! and yet, you must allow,\n");
-printf("I bore my house upon my back!\n");
+char *dup;
+int len;
+list_t *new;
+new = malloc(sizeof(list_t));
+if (new == NULL)
+return (NULL);
+dup = strdup(str);
+if (dup == NULL)
+{
+free(new);
+return (NULL);
 }
-
+for (len = 0; str[len];)
+len++;
+new->str = dup;
+new->len = len;
+new->next = *head;
+*head = new;
+return (new);
+}
