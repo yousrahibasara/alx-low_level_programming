@@ -3,8 +3,8 @@
 
 /**
  * main - prints the opcodes of its own main function.
- * @argc: ...
- * @argv: ..
+ * @argc: the number of the argument
+ * @argv: th array of the argument
  * Return: always 0
  */
 
