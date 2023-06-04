@@ -55,31 +55,41 @@ printf("%s%s", separator, str);
 
 void print_all(const char * const format, ...)
 {
-int i = 0, j = 0;
-char *separator = "";
-va_list ap;
-token_t token[] = {
-{"c", format_char},
-{"i", format_int},
-{"f", format_float},
-{"s", format_string},
-{NULL, NULL}
-};
-va_start(ap, format);
-while (format && format[i])
+int i = 0;
+char *str, *sep = "";
+va_list list;
+va_start(list, format);
+if (format)
 {
-j = 0;
-while (token[j].token)
+while (format[i])
 {
-if (format[i] == tokens[j].token[0])
+switch (format[i])
 {
-token[j].f(separator, ap);
-separator = ", ";
+case 'c':
+printf("%s%d", sep, va_arg(list, int));
+break;
+case 'i':
+printf("%s%i", sep, va_arg(list, int));
+break;
+case 'f':
+printf("%s%f", sep, va_arg(list, double));
+break;
+case 's':
+str = va_arg(list, char *);
+if (!str)
+str = "(nil)";
+printf("%s%s", sep, str);
+break;
+default:
+i++;
+continue;
 }
-j++;
-}
+sep = ", ";
 i++;
 }
-printf("\n");
-va_end(ap);
 }
+printf("\n");
+va_end(list);
+}
+
+
