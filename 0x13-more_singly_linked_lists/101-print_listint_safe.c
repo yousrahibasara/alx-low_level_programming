@@ -27,8 +27,15 @@ while (tortoise != hare)
 {
 nodes++;
 tortoise = tortoise->next;
+hare = hare->next;
 }
-return (nodes);
+tortoise = tortoise->next;
+while (tortoise != hare)
+{
+nodes++;
+tortoise = tortoise->next;
+}
+return (nodes++);
 }
 tortoise = tortoise->next;
 hare = (hare->next)->next;
