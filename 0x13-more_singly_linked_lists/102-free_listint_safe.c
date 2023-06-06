@@ -52,28 +52,28 @@ return (0);
 
 size_t free_listint_safe(listint_t **h);
 {
-listint_t *temp;
-size_t nodes, index = 0;
-nodes = looped_listint_len(h);
-if (nodes == 0)
-{
-for (; h != NULL && *h != NULL; nodes++)
-{
-temp = (*h)->next;
-free(*h);
-*h = temp;
-}
-}
-else
-{
-for (index = 0; index < nodes; index++)
-{
-temp = (*h)->next;
-free(*h);
-*h = temp;
-}
-*h = NULL;
-}
-h = NULL;
-return (nodes);
+	listint_t *tmp;
+	size_t nodes, index;
+	nodes = looped_listint_count(*h);
+	if (nodes == 0)
+	{
+		for (; h != NULL && *h != NULL; nodes++)
+		{
+			tmp = (*h)->next;
+			free(*h);
+			*h = tmp;
+		}
+	}
+	else
+	{
+		for (index = 0; index < nodes; index++)
+		{
+			tmp = (*h)->next;
+			free(*h);
+			*h = tmp;
+		}
+		*h = NULL;
+	}
+	h = NULL;
+	return (nodes);
 }
