@@ -1,33 +1,13 @@
-#include <stdlib.h>
-#include <string.h>
-#include "lists.h"
+#include <stdio.h>
+
+void__attribute__((constructor)) hare(void);
 
 /**
- * add_node - ....
- * @head: ....
- * @str: .....
- * Return: ....
+ * hare - prints a string before the main
  */
 
-list_t *add_node(list_t **head, const char *str)
+void hare(void)
 {
-char *dup;
-int len;
-list_t *new;
-new = malloc(sizeof(list_t));
-if (new == NULL)
-return (NULL);
-dup = strdup(str);
-if (dup == NULL)
-{
-free(new);
-return (NULL);
-}
-for (len = 0; str[len];)
-len++;
-new->str = dup;
-new->len = len;
-new->next = *head;
-*head = new;
-return (new);
+printf("You're beat! and yet, you must allow,");
+printf("\nI bore my house upon my back!\n");
 }
