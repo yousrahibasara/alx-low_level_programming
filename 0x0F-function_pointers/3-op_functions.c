@@ -1,78 +1,124 @@
-#include "function_pointers.h"
-
-#include <stdlib.h>
-
-#include <stdio.h>
 
 #include "3-calc.h"
 
+
+int op_add(int a, int b);
+
+int op_sub(int a, int b);
+
+int op_mul(int a, int b);
+
+int op_div(int a, int b);
+
+int op_mod(int a, int b);
+
+
 /**
 
- * main - Prints the result of simple operations.
+ * op_add - Returns the sum of two numbers.
 
- * @argc: The number of arguments supplied to the program.
+ * @a: The first number.
 
- * @argv: An array of pointers to the arguments.
+ * @b: The second number.
 
  *
 
- * Return: Always 0.
+ * Return: The sum of a and b.
 
  */
 
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int op_add(int a, int b)
 
 {
 
-        int num1, num2;
+        return (a + b);
 
-        char *op;
+}
 
+/**
 
-        if (argc != 4)
+ * op_sub - Returns the difference of two numbers.
 
-        {
+ * @a: The first number.
 
-                printf("Error\n");
+ * @b: The second number.
 
-                exit(98);
+ *
 
-        }
+ * Return: The difference of a and b.
 
+ */
 
-        num1 = atoi(argv[1]);
+int op_sub(int a, int b)
 
-        op = argv[2];
+{
 
-        num2 = atoi(argv[3]);
+        return (a - b);
 
+}
 
-        if (get_op_func(op) == NULL || op[1] != '\0')
+/**
 
-        {
+ * op_mul - Returns the product of two numbers.
 
-                printf("Error\n");
+ * @a: The first number.
 
-                exit(99);
+ * @b: The second number.
 
-        }
+ *
 
+ * Return: The product of a and b.
 
-        if ((*op == '/' && num2 == 0) ||
+ */
 
-            (*op == '%' && num2 == 0))
+int op_mul(int a, int b)
 
-        {
+{
 
-                printf("Error\n");
+        return (a * b);
 
-                exit(100);
+}
 
-        }
+/**
 
+ * op_div - Returns the division of two numbers.
 
-        printf("%d\n", get_op_func(op)(num1, num2));
+ * @a: The first number.
 
+ * @b: The second number.
 
-	return (0);
+ *
+
+ * Return: The quotient of a and b.
+
+ */
+
+int op_div(int a, int b)
+
+{
+
+        return (a / b);
+
+}
+
+/**
+
+ * op_mod - Returns the remainder of the division of two numbers.
+
+ * @a: The first number.
+
+ * @b: The second number.
+
+ *
+
+ * Return: The remainder of the division of a by b.
+
+ */
+
+int op_mod(int a, int b)
+
+{
+
+        return (a % b);
+
 }
